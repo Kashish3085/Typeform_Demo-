@@ -53,6 +53,8 @@ app.include_router(responses.router)
 app.include_router(public.router)
 
 
+@app.get("/")
+@app.get("/health")
 @app.get("/api/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "message": "Typeform Clone API is running"}
